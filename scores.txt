@@ -1,0 +1,4 @@
+User : Score
+Kofi : 100
+Amanuel :100
+Quang: 100
