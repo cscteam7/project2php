@@ -1,0 +1,63 @@
+body {
+	text-align: center;
+	background-image: url("bcimg.jpg");
+    background-repeat: repeat-x;
+    animation-name: MOVE-BG;
+    animation-duration: 45s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+	font-family: Arial;
+	color: white;
+	
+}
+.gamepage{
+    color: white;
+  }
+  @keyframes MOVE-BG {
+    from {
+        background-position: 0% 0%
+    }
+    to { 
+        background-position: 187% 0%
+    }
+}
+div {
+	border: 0;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+a {
+	margin-left: auto;
+	margin-right: auto;
+	color: gold;
+	text-decoration: none;
+	font-size: 35px;
+}
+
+.logo {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 300px;
+}
+
+#current_bank {
+	font-size: 35px;
+}
+
+#submit {
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 150px;
+	cursor: pointer;
+	border: 1px solid gold;
+	background: darkblue;
+	color: white;
+	padding: 1em 1em;
+	position: relative;
+	z-index: 1;
+	text-transform: uppercase;
+  }
