@@ -352,7 +352,7 @@ session_start();
                 </form> 
                 <?php function playaudio($audiosrc)
                 {                
-                    echo '<audio autoplay volume="0.1">';
+                    echo '<audio autoplay volume="0.5">';
                     echo $audiosrc;
                     echo '</audio>';
                 }?>
