@@ -9,7 +9,6 @@ if(isset($_SESSION['user']))   // Checking whether the session is already there 
 
 if(isset($_POST['login']))   // it checks whether the user clicked login button or not 
 {
-
     $userN = $_POST['uname'];
     $passW = $_POST['psw'];
     $userlist = file ('users.txt');

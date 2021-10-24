@@ -12,6 +12,7 @@ body
 }
 @keyframes MOVE-BG {
   from {
+    
       background-position: 0% 0%
   }
   to { 

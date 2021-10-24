@@ -13,6 +13,7 @@ if (in_array($userN, $users)) {
     
     $message = "user already exists";
 } 
+
 else {
 $score = '00';
 $myfile = fopen("users.txt", "a") or die("Unable to open file!");
