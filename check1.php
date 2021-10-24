@@ -25,13 +25,13 @@ session_start();
                         $_SESSION["bank"] = $_SESSION["bank"] + 100;
                         $bank = $_SESSION["bank"];
                         echo '<div><h1>Correct!</h1></div>';
-                        echo '<div><h4 id="current_bank">Amount Earned: $'. "$bank".'</h4></div>';
-                        writescore();   
+                        echo '<div><h4 id="current_bank">Amount Earned: $'. "$bank".'</h4></div>'; 
                         echo '<p><input id="submit" type="submit" value="Next Question" name="submit" /></p>';                    
                     }
                     else{
-                        $audiosrc ='<source src="./static/wrong.mp3"type="audio/mp3">';
+                        $audiosrc ='<source src="./static/wrong.mp3"type="audio/mp3">';  
                         playaudio($audiosrc);
+                        writescore();
                         $bank = $_SESSION["bank"];
                         echo '<div><h1>Incorrect!</h1></div>';
                         echo '<div><h4 id="current_bank">Amount Earned: $'. "$bank".'</h4></div>';                       
@@ -320,7 +320,6 @@ session_start();
                         echo '<div><h4 id="current_bank">Amount Earned: $'. "$bank".'</h4></div>'; 
                         $audiosrc ='<source src="./static/rightsound.mp3"type="audio/mp3">';
                         playaudio($audiosrc);
-                        writescore();
                         echo '<h4><a href="gamepage.php">Play Again</a></h4>';
                         
                         }

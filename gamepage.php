@@ -44,8 +44,8 @@
       <div class="card">
           <h3>Rules of the Game</h3>
           <ol>
-              <li>rule1 Press The start button to play the game</li>
-              <li>rule2 </li>
+              <li>Press play to start the game</li>
+              <li>The highest Score will be displayed on the leaderboard </li>
           </ol>
       </div>
       <div class="rightcolumn">
@@ -70,8 +70,8 @@
                   $userscore[] =  $display[1];                 
               }
               $topscores = array_combine($unames,$userscore);
+              arsort($topscores,SORT_NUMERIC );
               $length = count($topscores);
-              krsort($topscores);
               if ($length>0){
                   foreach ($topscores as $key => $value) 
                   {
