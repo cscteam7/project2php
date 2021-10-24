@@ -70,7 +70,7 @@
                   $userscore[] =  $display[1];                 
               }
               $topscores = array_combine($unames,$userscore);
-              arsort($topscores,SORT_NUMERIC );
+              arsort($topscores,SORT_NUMERIC);
               $length = count($topscores);
               if ($length>0){
                   foreach ($topscores as $key => $value) 
