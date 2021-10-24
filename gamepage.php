@@ -7,9 +7,9 @@
     session_destroy();
     header("Location: login.php");//  Destroys Session  and redirect to loginpage
   } 
-  if(isset($_POST['startgame']))   // it checks whether the user clicked logout button or not 
+  if(isset($_POST['startgame']))   // it checks whether the user clicked start button or not 
   {
-    header("Location: main.php");//  Destroys Session  and redirect to loginpage
+    header("Location: main.php");
   }
     ?> 
 <!DOCTYPE html>
