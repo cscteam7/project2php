@@ -15,6 +15,10 @@ to {
     background-position: 187% 0%
 }
 }
+.actmessage
+{
+  color: red;
+}
 .formframe
 {
     margin: 75px;

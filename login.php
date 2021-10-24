@@ -12,9 +12,6 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
     $userN = $_POST['uname'];
     $passW = $_POST['psw'];
     $userlist = file ('users.txt');
-    $scoreslist = file('scores.txt');
-    $uscore = "";
-
     $success = false;
     foreach ($userlist as $user) {
         $user_details = explode('|', $user);
@@ -26,12 +23,11 @@ if(isset($_POST['login']))   // it checks whether the user clicked login button 
     }
 
         if ($success)    //if the user succesfully login it sets $_SESSION['user'] to username and redirects to homepage
-         {                                 
-
+         { 
+          session_start();                                
           $_SESSION['user']=$userN;
           $_SESSION['score']=$score;
           header('Location: gamepage.php');
-
         }
 
         else

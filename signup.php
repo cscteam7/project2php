@@ -8,13 +8,14 @@ $users = array();
 foreach ($userlist as $user) 
 {
     $users = explode('|', $user);
+    $username[]=$users[0];
 }
-if (in_array($userN, $users)) {
-    
-    $message = "user already exists";
+if (in_array($userN, $username)) {
+    $message = "user already exists please click login";
 } 
 
 else {
+$message='';
 $score = '00';
 $myfile = fopen("users.txt", "a") or die("Unable to open file!");
 $data =  $userN.'|'.$passW.'|'.$score;
@@ -40,7 +41,8 @@ header('Location: login.php');
                     <form class="loginvalidation" action="" method="post" >
                         <span class="login100-form-title">
                             New Account
-                        </span><br><br>
+                        </span><br>
+                        <P class="actmessage"><?php $message ?></P>
                         <div class="wrap-input100" >
                             <span class="focus-input100" ><label for="newuname" class="focus-input100"><b>Username</b></label></span> <br>
                             <input class="input100"type="text" name="uname" required>

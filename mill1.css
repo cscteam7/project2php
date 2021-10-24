@@ -1,0 +1,75 @@
+body {
+	text-align: center;
+	font-family: Arial;
+	color: white;
+	background-image: url("bcimg.jpg");
+    background-repeat: repeat-x;
+    animation-name: MOVE-BG;
+    animation-duration: 45s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite; 
+}
+
+.gamepage{
+    color: white;
+  }
+  @keyframes MOVE-BG {
+    from {
+        background-position: 0% 0%
+    }
+    to { 
+        background-position: 187% 0%
+    }
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;	
+
+}
+td {
+	border: 2px solid gold;
+	border-radius: 30%;
+	font-size: 20px;
+	padding: 5px;
+	margin:0;
+	width: 500px;
+}
+#question {
+	border: 2px solid gold;
+	border-radius: 30%;
+	margin-bottom: 20px;
+}
+
+.logo {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 300px;
+}
+
+#submit {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+  cursor: pointer;
+  border: 1px solid gold;
+  background: darkblue;
+  color: white;
+  padding: 1em 1em;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+#current_bank {
+	margin-top: 20px;
+	font-size: 35px;
+}
+
+#question_number {
+	font-size: 30px;
+	color: goldenrod;
+}
