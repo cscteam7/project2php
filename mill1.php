@@ -1,5 +1,14 @@
 <?php
 session_start();
+playaudio();
+function playaudio()
+            {                
+                ob_end_clean();
+                echo '<audio loop autoplay volume="0.1">';
+                echo '<source src="./static/bcsound.mp3"type="audio/mp3">';
+                echo '</audio>';
+            }
+
 ?>
 <html>
     <head>

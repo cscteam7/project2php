@@ -32,7 +32,6 @@
 {
 
   echo '<p>Wellcome to Who wants to be a millionare ';echo $_SESSION['user']."</p>".
-    "<p>Your Current Score is "; echo $_SESSION['score']." </p>".
     '<form action="" method="post">
         <button type="submit" name="logout" value="logout">Log Out</button>
     </form>
@@ -45,8 +44,8 @@
       <div class="card">
           <h3>Rules of the Game</h3>
           <ol>
-              <li>rule1</li>
-              <li>rule2</li>
+              <li>rule1 Press The start button to play the game</li>
+              <li>rule2 </li>
           </ol>
       </div>
       <div class="rightcolumn">
@@ -60,16 +59,27 @@
               //Display the name of the current user 
               //show a little of the rules of the game
               //use a start button to link to the gamepage
-              $score= fopen("scores.txt","r");
-              echo ' ';
-              while(!feof($score)){
-                  $text=fgets($score);
-                  echo "<tr>";
-                    echo "<td>".$text."</td>"; 
-                  echo '</tr>'; 
-                }
-                echo "";
-                fclose($score);   
+              $scorelist = file ('scores.txt');
+              $display = array();
+              $unames = array();
+              $userscore = array();
+              foreach ($scorelist as $uscore) 
+              {
+                  $display = explode('|', $uscore);
+                  $unames[]=  $display[0];
+                  $userscore[] =  $display[1];                 
+              }
+              $topscores = array_combine($unames,$userscore);
+              $length = count($topscores);
+              krsort($topscores);
+              if ($length>0){
+                  foreach ($topscores as $key => $value) 
+                  {
+                      echo "<tr>";
+                      echo "\n  <td>" .$key . "</td>\n  <td>" . $value . "</td> \n";
+                      echo "</tr> \n";
+                  }
+              }  
             ?>
             </table>
         </div>
