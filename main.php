@@ -8,7 +8,7 @@
     </head>
     <!--<img src="millonaire.jpg" alt="WHO  WANTS TO BE  MILLONAIRE?!">-->
 <div class="topnav">
-    <a href="index.php">Click here to login!</a>
+    <a href="login.php">Click here to login!</a>
 
 </div>
 <div class="row">
