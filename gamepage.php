@@ -38,6 +38,10 @@
 </div>';
 }
 ?>
+
+<div class="wrapper">
+    <h4 class="summary_button"><a href="teaminfo.html">Summary</a></h4>
+</div>
    
 <div class="row">
     <div class="leftcolumn">
